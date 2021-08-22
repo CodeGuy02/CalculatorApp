@@ -2,25 +2,120 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href=".public/css/main.css">
+    <link rel="stylesheet" href="./main.css">
+    <script src="./calculator.js"></script>
     <title>IBM Calculator</title>
 </head>
 
 <body>
     <div class="container">
-        <nav> Navbar</nav>
-        <main> Main</main>
+        <nav>  </nav>
+        <main> 
+            <div class=table id="calculator">
+                <div class=row>
+                    <div class=cell id="logo">
+                        <div id="orangeLogo"> </div>
+                        <h1 id=logoText> Orange Calculator </h1>
+                    </div>
+                </div>
+                <div class=row>
+                    <div class=cell id="output">
+                        <h1 id="outputText">  </h1>
+                    </div>
+                </div>
+                <div class=row id="buttons">
+                    <div class=table>
+                        <div class=row>
+                            <div class=cell id="button" onclick="clearOutput()">
+                                <h1> C </h1>
+                            </div>
+                            <div class=cell id="button" onclick="clearLastEntry()">
+                                <h1> CE </h1>
+                            </div>
+                            <div class=cell id="button">
+                                <h1> √ </h1>
+                            </div>
+                            <div class=cell id="button">
+                                <h1> ÷ </h1>
+                            </div>
+                        </div>
+                        <div class=row>
+                            <div class=cell id="button" onclick="buttonPress(7)">
+                                <h1> 7 </h1>
+                            </div>
+                            <div class=cell id="button" onclick="buttonPress(8)">
+                                <h1> 8 </h1>
+                            </div>
+                            <div class=cell id="button" onclick="buttonPress(9)">
+                                <h1> 9 </h1>
+                            </div>
+                            <div class=cell id="button" onclick="buttonPress('/')">
+                                <h1>  / </h1>
+                            </div>
+                        </div>
+                        <div class=row>
+                            <div class=cell id="button" onclick="buttonPress(4)">
+                                <h1> 4 </h1>
+                            </div>
+                            <div class=cell id="button" onclick="buttonPress(5)">
+                                <h1> 5 </h1>
+                            </div>
+                            <div class=cell id="button" onclick="buttonPress(6)">
+                                <h1> 6 </h1>
+                            </div>
+                            <div class=cell id="button" onclick="buttonPress('x')">
+                                <h1> x </h1>
+                            </div>
+                        </div>
+                        <div class=row>
+                            <div class=cell id="button" onclick="buttonPress(1)">
+                                <h1> 1 </h1>
+                            </div>
+                            <div class=cell id="button" onclick="buttonPress(2)">
+                                <h1> 2 </h1>
+                            </div>
+                            <div class=cell id="button" onclick="buttonPress(3)">
+                                <h1> 3 </h1>
+                            </div>
+                            <div class=cell id="button" onclick="buttonPress('-')">
+                                <h1> - </h1>
+                            </div>
+                        </div>
+                        <div class=row>
+                            <div class=cell id="button" onclick="buttonPress(0)">
+                                <h1> 0 </h1>
+                            </div>
+                            <div class=cell id="button" onclick="buttonPress('.')">
+                                <h1> . </h1>
+                            </div>
+                            <div class=cell id="button" onclick="buttonPress('=')">
+                                <h1> = </h1>
+                            </div>
+                            <div class=cell id="button" onclick="buttonPress('+')">
+                                <h1> + </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=row>
+                    <div class=cell id="details">
+                        <h2 id=detailsText> Orange you glad you visited</h2>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
         <div id="content1">
-            content1
+
         </div>
-        <div id="content2">
-            content2
+        <div id="sidebar1">
+
         </div>
-        <div id="content3">
-            content3
+        <div id="sidebar2">
+
         </div>
         <footer>
-            Footer
+            
         </footer>
     </div>
 </body>
