@@ -2,6 +2,22 @@ var numbers = [];
 
 var operatorCount = 0;
 
+var currentColor = 0;
+
+var colorPalette = {
+    0:'purple',
+    1:'blue',
+    2:'#00FF00',
+    3:'maroon',
+    4:'khaki',
+    5:'ForestGreen',
+    6:'PaleVioletRed',
+    7:'LightSeaGreen',
+    8:'DeepPink',
+    9:'Orchid',
+    numColors:10 // manual update required :(
+};
+
 function buttonPress(ourNum) {
     var otherOperatorPresent = false;
     var otherOperator = '';
@@ -150,6 +166,9 @@ function buttonPress(ourNum) {
                     }
                 })
                 total = firstNum / secondNum;
+                if ( (total % 1) !== 0 ) {
+                    total = total.toFixed(4);
+                }
             }
 
 
@@ -179,4 +198,26 @@ function clearLastEntry() {
         //alert('operator count = ' + operatorCount);
     }
 }
+
+function changeColor() {
+    console.log('changing color');
+    currentColor++;
+    
+
+    if (currentColor >= colorPalette.numColors) {
+        currentColor = 0;    
+    }
+    console.log('currentColor: ' + currentColor + '  name: ' + colorPalette[currentColor]);
+
+    //document.body.style.setProperty('#button', colorPalette[currentColor] );
+    buttons = document.getElementsByClassName('button');
+    for(i = 0; i < buttons.length; i++) {
+        buttons[i].style.color = colorPalette[currentColor];
+      }
+    
+    /*
+    buttonsBackground = document.getElementById('buttons');
+    buttonsBackground.style.background = colorPalette[currentColor];
+    */
+}   
 
